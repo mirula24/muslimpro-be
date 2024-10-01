@@ -10,10 +10,11 @@ public class CorsConfig implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**") // Mengizinkan semua path/endpoint
-                .allowedOrigins("*") // Mengizinkan semua origin
-                .allowedMethods("*") // Mengizinkan semua metode HTTP (GET, POST, PUT, DELETE, dll.)
-                .allowedHeaders("*") // Mengizinkan semua header
-                .allowCredentials(true); // Mengizinkan penggunaan credentials (cookie, authorization headers)
+        registry.addMapping("/**")
+                .allowedOriginPatterns("http://localhost:5173", "https://muslimpro.vercel.app/")
+                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+                .allowedHeaders("*")
+                .allowCredentials(true)
+                .maxAge(3600);
     }
 }
