@@ -2,7 +2,7 @@ package com.amirul.muslimpro.entity;
 import jakarta.persistence.*;
 import lombok.*;
 @Entity
-@Table(name = "captions")
+@Table(name = "caption_for_review")
 @Getter
 @Setter
 @NoArgsConstructor

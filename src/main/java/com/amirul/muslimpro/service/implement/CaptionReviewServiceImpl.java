@@ -31,6 +31,11 @@ public class CaptionReviewServiceImpl implements CaptionReviewService {
     }
 
     @Override
+    public CaptionReview getByEmail(String email) {
+        return captionReviewRespository.findByEmail(email);
+    }
+
+    @Override
     public List<CaptionReview> getAllCaption() {
         return captionReviewRespository.findAll();
     }

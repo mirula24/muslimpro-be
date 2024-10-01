@@ -29,6 +29,10 @@ public class CaptionReviewController {
     public ResponseEntity<?> getAllCaption(){
         return new ResponseEntity<>(captionReviewService.getAllCaption(), HttpStatus.ACCEPTED);
     }
+    @GetMapping("/email")
+    public ResponseEntity<?> getByEmail(@RequestParam String email){
+        return new ResponseEntity<>(captionReviewService.getByEmail(email), HttpStatus.ACCEPTED);
+    }
 
     @PutMapping
     public ResponseEntity<?> updateCaption(@PathVariable Integer id, @RequestBody CaptionRequest request){

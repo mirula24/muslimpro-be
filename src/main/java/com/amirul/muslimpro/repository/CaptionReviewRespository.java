@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface CaptionReviewRespository extends JpaRepository<CaptionReview, Integer> {
+    CaptionReview findByEmail(String email);
 }
