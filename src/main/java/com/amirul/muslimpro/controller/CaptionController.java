@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/caption")
 @RequiredArgsConstructor
 @Validated
+@CrossOrigin
 public class CaptionController {
     private final CaptionService captionService;
 
